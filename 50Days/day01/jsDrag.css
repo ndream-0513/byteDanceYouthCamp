@@ -1,0 +1,77 @@
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.active {
+  cursor: grabbing;
+}
+.slide {
+  width: 260px;
+  height: 100%;
+  overflow: scroll;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+.slide #list {
+  user-select: none;
+}
+.slide #list .item {
+  background: rgba(0, 0, 0, 0.15);
+  width: 120px;
+  display: inline-block;
+  break-inside: avoid;
+  margin-bottom: 4px;
+}
+.slide #list .item:hover {
+  cursor: grab;
+  filter: brightness(90%);
+}
+.slide #list .item:active {
+  cursor: grabbing;
+}
+.slide .grid {
+  column-count: 2;
+  column-gap: 0px;
+}
+.slide::-webkit-scrollbar {
+  display: none;
+  /* Chrome Safari */
+}
+#content {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin-left: 45px;
+  background: rgba(0, 0, 0, 0.07);
+}
+#content .item {
+  position: absolute;
+  transform-origin: top left;
+}
+.flutter {
+  position: absolute;
+  z-index: 9999;
+  pointer-events: none;
+}
+.is-return {
+  transition: all 0.3s;
+}
+#content {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin-left: 45px;
+  background: rgba(0, 0, 0, 0.07);
+}
+#content .item {
+  position: absolute;
+  transform-origin: top left;
+}
+#content #tip {
+  color: #999999;
+  font-size: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
